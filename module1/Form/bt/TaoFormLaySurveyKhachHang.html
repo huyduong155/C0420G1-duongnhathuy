@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<form>
+    <h3>Market Research Survey</h3>
+    <p>Please take a few moments to complete this satisfaction survey</p>
+    <h4>What is your age range?</h4>
+    <select>
+        <option>18-24</option>
+    </select>
+    <h4>What is your yearly income range?</h4>
+    <select>
+        <option>$0-$25,000</option>
+    </select>
+    <h4>Gender</h4>
+    <input type="radio" name="gioitinh">male <br>
+    <input type="radio" name="gioitinh">female
+    <h4>Which of the following products have your purchased in the last 2 months.please check all that apply</h4>
+    <input type="checkbox">product 1 <br>
+    <input type="checkbox">product 2 <br>
+    <input type="checkbox">product 3
+    <h4>How often would you use our new product?</h4>
+    <input type="radio" name="time">daily <br>
+    <input type="radio" name="time">weekly <br>
+    <input type="radio" name="time">monthly
+    <h4>What would you pay for the new product?</h4>
+    <label>$</label>
+    <input type="text" name="Dollars" value="Dollars">.
+    <input type="text"name="cent" value="cents">
+    <h4>What features would you like to see in the new product.</h4>
+    <textarea name="product" id="" cols="100" rows="10"></textarea>
+    <p>Please rate your level of agreement with the following statements.</p>
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Stongly Agree</th>
+        </tr>
+        <tr>
+            <th style="float: left">Our products are priced fairly.</th>
+            <td>
+                <input type="radio" name="a">1
+            </td>
+            <td>
+                <input type="radio" name="a">2
+            </td>
+            <td>
+                <input type="radio" name="a">3
+            </td>
+            <td>
+                <input type="radio" name="a">4
+            </td>
+        </tr>
+        <tr>
+            <th style="float: left">Our products are high quality.</th>
+            <td>
+                <input type="radio" name="a">1
+            </td>
+            <td>
+                <input type="radio" name="a">2
+            </td>
+            <td>
+                <input type="radio" name="a">3
+            </td>
+            <td>
+                <input type="radio" name="a">4
+            </td>
+        </tr>
+        <tr>
+            <th style="float: left">You would recommend our product to a friend or cowoker.</th>
+            <td>
+                <input type="radio" name="a">1
+            </td>
+            <td>
+                <input type="radio" name="a">2
+            </td>
+            <td>
+                <input type="radio" name="a">3
+            </td>
+            <td>
+                <input type="radio" name="a">4
+            </td>
+        </tr>
+
+    </table>
+    <button type="submit">Submit</button>
+</form>
+<style>
+    table{border-collapse: collapse}
+
+</style>
+
+</body>
+</html>
