@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+<body>
+<input type="text" id="a">
+<input type="text" id="b"> <br>
+<button type="submit"id="add">Addition(+)</button>
+<button type="submit"id="sub">Subtraction(-)</button>
+<button type="submit"id="mul">Multiplication(X)</button>
+<button type="submit"id="div">Division(/)</button> <br>
+<label id="kq">result</label>
+<script>
+let A=document.getElementById('a');
+let B=document.getElementById('b');
+let result=document.getElementById('kq');
+add.onclick=function () {
+        let nhapA = parseInt(a.value);
+        let nhapB=parseInt(b.value);
+        let addition= nhapA + nhapB;
+        result.innerHTML='result addition :'+ addition
+}
+sub.onclick=function () {
+    let nhapA = parseInt(a.value);
+    let nhapB=parseInt(b.value);
+    let addition= nhapA - nhapB;
+    result.innerHTML='result subtraction :'+ addition
+}
+mul.onclick=function () {
+    let nhapA = parseInt(a.value);
+    let nhapB=parseInt(b.value);
+    let addition= nhapA * nhapB;
+    result.innerHTML='result multiplication :'+ addition
+}
+div.onclick=function () {
+    let nhapA = parseInt(a.value);
+    let nhapB=parseInt(b.value);
+    let addition= nhapA/nhapB;
+    result.innerHTML='result division :'+ addition
+}
+
+</script>
+</body>
+</html>

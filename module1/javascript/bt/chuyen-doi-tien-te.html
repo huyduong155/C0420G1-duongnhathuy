@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>
+                <label>Amount</label><br>
+                <input type="text" id="money">
+            </th>
+            <th>
+                <label>From Currency</label> <br>
+                <select>
+                    <option>VietNam</option>
+                </select>
+            </th>
+            <th>
+                <label>To Currency</label> <br>
+                <select>
+                    <option>USD</option>
+                </select>
+            </th>
+            <th>
+                <button type="submit" id="submit">Convert</button>
+            </th>
+        </tr>
+    </table>
+    <label id="kq">result:</label>
+    <script>
+        let money=document.getElementById('money');
+        let result=document.getElementById('kq');
+        submit.onclick=function(){
+            let vnd= parseInt(money.value);
+            let USD= vnd/25000;
+           result.innerHTML="result:"+USD
+        }
+    </script>
+
+
+
+</body>
+</html>
