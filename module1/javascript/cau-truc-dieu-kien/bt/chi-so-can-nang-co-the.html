@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if-else</title>
+</head>
+<body>
+<script>
+    let weight=prompt('weight (kg)');
+    let height=prompt('height (m)');
+    let bmi= weight/(height*height);
+    if (bmi<18.5){
+        document.write('underweight');
+    }else if (bmi<25.0){
+        document.write('normall');
+    }else if (bmi<30){
+        document.write('overweight');
+    }else
+        document.write('obese');
+</script>
+</body>
+</html>

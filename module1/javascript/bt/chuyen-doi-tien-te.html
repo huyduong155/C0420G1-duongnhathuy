@@ -31,10 +31,11 @@
     </table>
     <label id="kq">result:</label>
     <script>
+
         let money=document.getElementById('money');
         let result=document.getElementById('kq');
         submit.onclick=function(){
-            let vnd= parseInt(money.value);
+            let vnd= (money.value)*1;
             let USD= vnd/25000;
            result.innerHTML="result:"+USD
         }

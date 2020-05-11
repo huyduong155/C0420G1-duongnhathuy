@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case study</title>
+</head>
+<body>
+</body>
+<script>
+    let name = prompt('Tên');
+    let ID= prompt('CMND');
+    let birthday= prompt('Ngày tháng năm sinh');
+    let mail = prompt('Email');
+    let address = prompt('địa chỉ');
+    let CustomerType = prompt('Loại thẻ (Diamon, Platinum, Gold, Silver, Member');
+    let discount = prompt('Mã giảm giá');
+    let person = prompt('Số lượng đi kèm');
+    let rentDay = prompt('Số ngày thuê');
+    let serviceType = prompt('Loại dịch vụ (Villa, House, Room)');
+     let money=(serviceType=='villa')?500:(serviceType=='house')?300:(serviceType=='room')?100:0;
+    let rentType = prompt('Loại phòng thuê (Vip, Business, Normal');
+    document.write('Tên:'+ name);
+    document.write('<br>');
+    document.write('CMND:'+ ID);
+    document.write('<br>');
+    document.write('Ngày tháng năm sinh:'+ birthday);
+    document.write('<br>');
+    document.write('Email:'+ mail);
+    document.write('<br>');
+    document.write('Địa chỉ:'+ address);
+    document.write('<br>');
+    document.write('Loại thẻ:'+ CustomerType);
+    document.write('<br>');
+    document.write('Giảm giá (%):'+ discount);
+    document.write('<br>');
+    document.write('Số lượng đi kèm:'+ person);
+    document.write('<br>');
+    document.write('Số ngày thuê:'+ rentDay);
+    document.write('<br>');
+    document.write('Loại dịch vụ:'+ serviceType);
+    document.write('<br>');
+    document.write('Loại phòng thuê:'+ rentType);
+    document.write('<br>');
+    let tolal= rentDay*money*(1-discount/100);
+    document.write('Số tiền phải trả:'+tolal)
+
+</script>
+</html>
