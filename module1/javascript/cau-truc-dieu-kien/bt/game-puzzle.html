@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game-puzzle</title>
+</head>
+<body>
+<img src="./img/img1-1.jpg" id="a" width="500px";height="200"/>
+<br>
+<img src="./img/img2-2.jpg" id="b" width="500px";height="200"/>
+<br>
+<img src="./img/img3-3.jpg" id="c" width="500px";height="200"/>
+<br>
+<img src="./img/img1-4.jpg" id="d" width="500px";height="200"/>
+<br>
+<img src="./img/img2-5.jpg" id="e" width="500px";height="200"/>
+
+<script>
+    let i=1;
+    let A=document.getElementById('a');
+    let B=document.getElementById('b');
+    let C=document.getElementById('c');
+    let D=document.getElementById('d');
+    let E=document.getElementById('e');
+    a.onclick=function () {
+        i++
+        A.src="./img/img"+i+"-1.jpg";
+        if(i>2){
+            i=0
+        }
+    }
+    b.onclick=function () {
+        i++
+        B.src="./img/img"+i+"-2.jpg"
+        if(i>2){
+            i=0
+        }
+    }
+    c.onclick=function () {
+        i++
+        C.src="./img/img"+i+"-3.jpg"
+        if(i>2){
+            i=0
+        }
+    }
+    d.onclick=function () {
+        i++
+        D.src="./img/img"+i+"-4.jpg"
+        if(i>2){
+            i=0
+        }
+    }
+    e.onclick=function () {
+        i++
+        E.src="./img/img"+i+"-5.jpg"
+        if(i>2){
+            i=0
+        }
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
