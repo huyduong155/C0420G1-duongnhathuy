@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mang</title>
+</head>
+<body>
+<script>
+let num=window.prompt('nhập 1 dãy số');
+let change=num.toString();
+let result=[];
+for (let i=0;i<change.length;i++){
+    if ((change[i]%2===0) && (change[i+1]%2===0)){
+        result.push(change[i],'-')
+    }
+    else result.push(change[i])
+
+}
+alert(result.join(''))
+
+
+</script>
+</body>
+</html>

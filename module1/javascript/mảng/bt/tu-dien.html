@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu-dien</title>
+</head>
+<body>
+<input type="text" id="text">
+<button type="submit" id="submit" onclick="sb()" >Dịch</button>
+<p id="result"></p>
+<script>
+    let eng=['name','bithday','date','alone'];
+    let viet=['tên','sinh nhật','ngày','một mình'];
+    let a=document.getElementById(text)
+    let b;
+    function sb() {
+        for (let i=0;i<viet.length;i++){
+            if(a==eng[i]){
+                b=vie[i];
+                break;
+            } else b="Không tìm thấy";
+        }
+        document.getElementById("result").innerHTML = b;
+    }
+
+
+</script>
+
+</body>
+</html>

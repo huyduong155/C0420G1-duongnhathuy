@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so-nguyen-to</title>
+</head>
+<body>
+<script>
+
+    let num=prompt('nhập số nguyên tố cần tìm');
+    let count=0;
+    let text='';
+    let N=2;
+    let i;
+    while (count<num){
+        for (i=2;i<N;i++){
+            if(N%i==0)
+                break;
+        }
+        if (i==N){
+        text=text+N+' ';
+        count++
+        }
+        N++
+    }
+    document.write('các số nguyên tố : '+text)
+
+
+
+
+
+
+</script>
+</body>
+</html>
