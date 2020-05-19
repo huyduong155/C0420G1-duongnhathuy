@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-3</title>
+</head>
+<body>
+<script>
+    let fac=prompt('nhập 1 số');
+    let sum=1;
+    function giaithua(a) {
+     if (a==0||a==1){
+     return 1
+     }
+     for (let i=2;i<=a;i++){
+         sum*=i;
+     }return sum;
+    }
+
+   alert(giaithua(fac)) ;
+</script>
+</body>
+</html>

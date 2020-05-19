@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-5</title>
+</head>
+<body>
+<script>
+let star=["Polaris"," Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+let zodiac=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "leo"];
+let text= prompt('nhập tên ngôi sao');
+function findZodiac() {
+    for (let i=0;i<zodiac.length;i++){
+        if (text==star[i]){
+            alert(zodiac[i]);
+            break;
+        }
+    }
+}
+findZodiac();
+</script>
+</body>
+</html>

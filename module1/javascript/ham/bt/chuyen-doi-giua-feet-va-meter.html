@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen-doi</title>
+</head>
+<body>
+<input type="text" placeholder="meters" id="met" oninput="meterstofeet(this.value)">
+<p id="result1">feet:</p>
+<input type="text" placeholder="feet" id="fee" oninput="feettometers(this.value)">
+<p id="result2">meters:</p>
+<script>
+
+function meterstofeet(valnum) {
+    valnum= parseFloat(valnum);
+    document.getElementById('result1').innerHTML= valnum * 3.279;
+}
+function feettometers(valnum) {
+        valnum= parseFloat(valnum);
+        document.getElementById('result2').innerHTML = valnum * 0.305;
+
+}
+</script>
+</body>
+</html>

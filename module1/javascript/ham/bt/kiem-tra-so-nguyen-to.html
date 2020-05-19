@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so-nguyen-to</title>
+</head>
+<body>
+<script>
+    let num= prompt('nhập số nguyên tố cần tìm');
+    function findnum(a) {
+        let count=0;
+        for (let i=2;i<a;i++){
+            if (a % i == 0){
+                count++;
+            }
+
+        }if (count>0){
+            return false;
+        }else {
+            return true;
+        }
+
+    }
+    alert(findnum(num));
+</script>
+</body>
+</html>

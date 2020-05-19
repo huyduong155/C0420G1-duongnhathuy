@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-9</title>
+</head>
+<body>
+<script>
+    let arr=prompt('nhập vào 1 mảng kí tự');
+    function check(a) {
+        let char=prompt('nhập 1 kí tự');
+        let count=0;
+        for (i=0;i<a.length;i++){
+            if (char==a[i]){
+                count++;
+            }
+        }
+        if (count>0){
+            alert(count);
+        }else {
+            alert('-1');
+        }
+
+
+    }
+    check(arr);
+
+
+</script>
+</body>
+</html>
