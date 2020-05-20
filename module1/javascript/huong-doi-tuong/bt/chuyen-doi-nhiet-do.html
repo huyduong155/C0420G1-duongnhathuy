@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhiet-do</title>
+</head>
+<body>
+<script>
+    let num=prompt('nhập độ C')*1;
+    class Temperature{
+        constructor(C) {
+            this.C=C;
+        }
+        getC(){
+            return this.C;
+        }
+        getOF(){
+            return this.C * 1.8 + 32;
+        }
+        getOKelvin(){
+            return this.C + 273.15;
+        }
+    }
+    let temperature=new Temperature(num);
+    alert('độ F= '+temperature.getOF());
+    alert('độ K= '+temperature.getOKelvin());
+</script>
+</body>
+</html>

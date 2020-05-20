@@ -8,8 +8,8 @@
 <script>
 let star=["Polaris"," Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
 let zodiac=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "leo"];
-let text= prompt('nhập tên ngôi sao');
-function findZodiac() {
+let text1= prompt('nhập tên ngôi sao');
+function findZodiac(text) {
     for (let i=0;i<zodiac.length;i++){
         if (text==star[i]){
             alert(zodiac[i]);
@@ -17,7 +17,7 @@ function findZodiac() {
         }
     }
 }
-findZodiac();
+findZodiac(text1);
 </script>
 </body>
 </html>

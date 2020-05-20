@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hinh-chu-nhat</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+<script>
+
+    class Rectangle{
+        constructor (width,height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth(){
+            return this.width;
+        }
+        getHeight(){
+            return this.height;
+        }
+        setWidth(width){
+            this.width=width;
+        }
+        setHeight(height){
+            this.width=height;
+        }
+        getAcreage() {
+            return this.width*this.height;
+        }
+        getPerimeter() {
+            return (this.width+this.height)*2;
+        }
+        getDraw(){
+            let getRec=document.getElementById("myCanvas").getContext("2d");
+            getRec.beginPath();
+            getRec.rect(0,0,this.width,this.height);
+            getRec.stroke();
+        }
+    }
+let rectangle=new Rectangle(200,500);
+    rectangle.getDraw();
+    alert('diện tích: '+rectangle.getAcreage());
+    alert('chu vi: '+rectangle.getPerimeter());
+    rectangle.setWidth(250);
+    rectangle.setHeight(600);
+
+</script>
+</body>
+</html>
