@@ -1,4 +1,4 @@
 package AbstractClass_Interface.thucHanh.lopAnimal;
 
-public class Fruit {
+public abstract class Fruit implements Edible {
 }

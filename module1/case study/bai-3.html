@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai-3</title>
 </head>
 <body>
-$END$
+<script>
+
+    function check() {
+        let arr=[];
+        check=false;
+        do{
+            let countAt=0
+            let countDoc=0
+           let mail = prompt('nhập Email');
+            for (let i=0;i<mail.length;i++){
+                if (mail.charAt(i)==='@'){
+                    countAt++;
+                    for (let j=i+1;j<mail.length;j++){
+                        if (mail.charAt(j)==='.'){
+                            countDoc++;
+                        }
+                    }
+                }
+
+            }
+            if (countAt!=1||countDoc<1){
+                alert('email bạn nhập không đúng');
+            }else {
+                check=true;
+                for (let i=0;i<mail.length;i++){
+                    if (mail[i]=='@'){
+                        break;
+                    }
+                    arr.push(mail[i]);
+                }
+                let str=arr.toString().replace(/,/g,'');
+                alert('chào '+ str);
+            }
+
+        }while (!check)
+
+        check=false;
+
+    }
+    check();
+</script>
 </body>
 </html>

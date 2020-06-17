@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai thi 1</title>
 </head>
 <body>
-$END$
+<script>
+    let n;
+    let arr=[];
+    let tempt='';
+    do{
+        n=parseInt(prompt('nhập vào 1 số nguyên dương'))
+    } while(n<6)
+
+    for (let i=0;i<n;i++){
+        arr[i]=prompt(i);
+    }
+    arr.sort(function (a,b) {
+        return a-b;
+
+    });
+    for (let i=0;i<arr.length;i++){
+        tempt+=arr[i]+',';
+    }
+    alert(tempt);
+</script>
 </body>
 </html>

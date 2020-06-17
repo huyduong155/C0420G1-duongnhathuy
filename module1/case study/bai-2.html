@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai-2</title>
 </head>
 <body>
-$END$
+<script>
+    let num=prompt('nhập vào 1 số có 4 chữ số');
+    function isNumber(a) {
+        let soDau= parseInt(a[0])+parseInt(a[1]);
+        let soCuoi=parseInt(a[2])-parseInt(a[3]);
+        if (soDau==soCuoi){
+            return true;
+        }else
+            return false;
+    }
+    alert(isNumber(num));
+</script>
 </body>
 </html>

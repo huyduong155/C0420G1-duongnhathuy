@@ -2,9 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>yc6-tast2</title>
 </head>
 <body>
-$END$
+<script>
+    let listEmployee=[];
+    class Employee{
+        getName(){
+            return this.name;
+        }
+        getBirthday(){
+            return this.birthday;
+        }
+        getPhone(){
+            return this.phone;
+        }
+        getEmail(){
+            return this.email;
+        }
+        getID(){
+            return this.ID;
+        }
+        getLevel(){
+            return this.level;
+        }
+        getLocation(){
+            return this.location;
+        }
+        getSalary(){
+            if (this.getLocation()=='manager'){
+                this.salary= 500;
+            }else if (this.getLocation()=='sale'){
+                this.salary= 300;
+            }else if (this.getLocation()=='marketing'){
+                this.salary= 200;
+            }
+            return this.salary;
+        }
+        setName(name){
+            this.name=name;
+        }
+        setBirthday(birthday){
+            this.birthday=birthday;
+        }
+        setEmail(email){
+            this.email=email;
+        }
+        setPhone(phone){
+            this.phone=phone;
+        }
+        setID(ID){
+            this.ID=ID;
+        }
+        setLevel(level){
+            this.level=level;
+        }
+        setLocation(location){
+            this.location=location;
+        }
+    }
+    function displayMainMenu() {
+        let choose = prompt('1.Add New Employee' + '\n2.Display Infomation Employee' + '\n3.Salary Of Employee' + '\n4.Exit');
+        switch (choose) {
+            case '1':
+                addNewEmployee();
+                break;
+            case '2':
+                displayInfomation();
+                break;
+            case '3':
+                salaryOfEmployee();
+                break;
+            case '4':
+            default:
+                alert('fail');
+        }
+    }
+    function  salaryOfEmployee() {
+        let temp=''
+        for(let i=0;i<listEmployee.length;i++){
+            temp+= i+'. name: '+listEmployee[i].getName()+'\n';
+        }
+        let chooseSalary=parseInt(prompt(temp));
+        alert('Lương của '+listEmployee[chooseSalary].getName()+' là: '+listEmployee[chooseSalary].getSalary());
+        displayMainMenu();
+    }
+    function displayInfomation() {
+        let temp=''
+        for(let i=0;i<listEmployee.length;i++){
+            temp+= i+'. name: '+listEmployee[i].getName()+'\n';
+        }
+        let chooseDisplay=parseInt(prompt(temp));
+        alert('Tên: '+listEmployee[chooseDisplay].getName()+'\n'
+        +'Ngày sinh: '+listEmployee[chooseDisplay].getBirthday()+'\n'
+            +'Số điện thoại: '+listEmployee[chooseDisplay].getPhone()+'\n'
+            +'Email: '+listEmployee[chooseDisplay].getEmail()+'\n'
+            +'CMND: '+listEmployee[chooseDisplay].getID()+'\n'
+            +'Trình độ: '+listEmployee[chooseDisplay].getLevel()+'\n'
+            +'Vị trí: '+listEmployee[chooseDisplay].getLocation()+'\n');
+        displayMainMenu();
+    }
+    function addNewEmployee() {
+        let employee=new Employee();
+        employee.setName(prompt('Nhập tên'));
+        employee.setBirthday(prompt('Nhập ngày sinh'));
+        employee.setPhone(prompt('Nhập số điện thoại'));
+        employee.setEmail(prompt('Nhập email'));
+        employee.setID(prompt('Nhập CMDN'));
+        employee.setLevel(prompt('Nhập trình độ'));
+        employee.setLocation(prompt('Nhập vị trí'));
+        listEmployee.push(employee);
+        alert('bạn đã add thành công');
+        displayMainMenu();
+    }
+    displayMainMenu();
+
+</script>
 </body>
 </html>

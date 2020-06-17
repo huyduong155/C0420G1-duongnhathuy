@@ -2,9 +2,173 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>yeu-cau-6</title>
 </head>
 <body>
-$END$
+<script>
+    let check=false;
+    let regexID=/^[0-9]{9}$/;
+    let regexBirthday=/^\d{2}[./-]\d{2}[./-]\d{4}$/;
+    let regexMail=/\S+@\S+\.+\S+/;
+    let listCustomer=[];
+    class Customer{
+        setName(name){
+            this.name=name;
+        }
+        getName(){
+            return this.name;
+        }
+        setID(ID){
+            this.ID=ID;
+        }
+        getID(){
+            return this.ID;
+        }
+        setBirtthday(birthday){
+            this.birthday=birthday;
+        }
+        getBirtthday(){
+            return this.birthday;
+        }
+        setMail(mail){
+            this.mail=mail;
+        }
+        getMail(){
+            return this.mail;
+        }
+        setAddress(address){
+            this.address=address;
+        }
+        getAddress(){
+            return this.address;
+        }
+        setCustomertype(customertype){
+            this.customertype=customertype;
+        }
+        getCustomertype(){
+            return this.customertype;
+        }
+        setDiscount(discount){
+            this.discount=discount;
+        }
+        getDiscount(){
+            return this.discount;
+        }
+        setPerson(person){
+            this.person=person;
+        }
+        getPerson(){
+            return this.person;
+        }
+        setRentday(rentday){
+            this.rentday=rentday;
+        }
+        getRentday(){
+            return this.rentday;
+        }
+        setServicetype(servicetype){
+            this.servicetype=servicetype;
+        }
+        getServicetype(){
+            return this.servicetype;
+        }
+        setRenttype(renttype){
+            this.renttype=renttype;
+        }
+        getRenttype(){
+            return this.renttype;
+        }
+        total(){
+            let money=0;
+            if (this.getServicetype() =='villa'){
+                money=500;
+            }else if (this.getServicetype() =='house'){
+                money=300;
+            }else if (this.getServicetype() =='room'){
+                money=200;
+            }
+            return this.rentday*money*(1-this.discount/100);
+        }
+    }
+    function displayMainMenu() {
+        let choose = prompt('1.Add New Customer' + '\n2.Display Infomation Customer'+ '\n3.Total pays Customer' + '\n4.Edit Infomation Customer' + '' +
+            '\n5.Delete Customer' + '\n6.Exit');
+        switch (choose) {
+            case '1':
+                addNewCustomer();
+                break;
+            case '3':
+                displaytotal();
+            default:
+            {
+                alert('fail');
+            }
+        }
+    }
+    function displaytotal() {
+        let temp=''
+        for(let i=0;i<listCustomer.length;i++){
+            temp+= i+'. name: '+listCustomer[i].getName()+'\n';
+        }
+        let chooseDisplay=parseInt(prompt(temp));
+        alert('Tổng tiền của bạn là: '+listCustomer[chooseDisplay].total());
+        displayMainMenu();
+    }
+    function addNewCustomer() {
+        let cus=new Customer();
+        let name = prompt('Tên');
+        let ID;
+        do{
+             ID= prompt('CMND');
+            if (regexID.test(ID)){
+                check=true;
+            }else {
+                alert('Số bạn nhập không đúng');
+            }
+        }while (!check);
+        check=false;
+        let birthday;
+        do{
+             birthday= prompt('Ngày tháng năm sinh');
+            if (regexBirthday.test(birthday)){
+                check=true;
+            }
+            
+        }while (!check);
+        check=false;
+        let mail;
+        do{
+             mail = prompt('Email');
+            if (regexMail.test(mail)){
+                check=true;
+            }else {
+                alert('Mail bạn nhập không đúng');
+            }
+        }while (!check);
+        check=false;
+        let address = prompt('địa chỉ');
+        let CustomerType = prompt('Loại thẻ (Diamon, Platinum, Gold, Silver, Member');
+        let discount = prompt('Mã giảm giá');
+        let person = prompt('Số lượng đi kèm');
+        let rentDay = prompt('Số ngày thuê');
+        let serviceType = prompt('Loại dịch vụ (Villa, House, Room)');
+        let rentType = prompt('Loại phòng thuê (Vip, Business, Normal');
+        cus.setName(name);
+        cus.setID(ID);
+        cus.setBirtthday(birthday);
+        cus.setMail(mail);
+        cus.setAddress(address);
+        cus.setCustomertype(CustomerType);
+        cus.setDiscount(discount);
+        cus.setPerson(person);
+        cus.setRentday(rentDay);
+        cus.setServicetype(serviceType);
+        cus.setRenttype(rentType);
+        listCustomer.push(cus);
+        alert('Bạn đã add thành công');
+        displayMainMenu();
+    }
+    displayMainMenu();
+</script>
 </body>
 </html>

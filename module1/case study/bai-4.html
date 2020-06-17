@@ -2,9 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai-4</title>
 </head>
 <body>
-$END$
+<input type="text" id="username"> Tên đăng nhập <br>
+<input type="text" id="name"> Tên nhân viên <br>
+<input type="password" id="password"> Tên mật khẩu <br>
+<input type="text" id="birthday"> Ngày sinh <br>
+<input type="text" id="gender"> Giới tính <br>
+<input type="text" id="add"> Địa chỉ <br>
+<input type="text" id="num"> Số điên thoại <br>
+<button type="button" id="submit">Register</button>
+
+<script>
+    let regexBirthday=/^\d{2}[./-]\d{2}[./-]\d{4}$/;
+let listEmployee=[];
+    class Employee{
+        setTenDangNhap(TDN){
+            this.TDN=TDN;
+        }
+        setTenNhanVien(TNV){
+            this.TNV=TNV;
+        }
+        setMatKhau(pass){
+            this.pass=pass;
+        }
+        setNgaySinh(birth){
+            this.birth=birth;
+        }
+        setCMND(ID){
+            this.ID=ID;
+        }
+        setGioiTinh(gender){
+            this.gender=gender;
+        }
+        setDiaChi(address){
+            this.address=address;
+        }
+        setSoDienThoai(SDT){
+            this.SDT=SDT;
+        }
+        getTenDangNhap(){
+           return  this.TDN;
+        }
+        getTenNhanVien(){
+           return  this.TNV;
+        }
+        getMatKhau(){
+           return  this.pass;
+        }
+        getNgaySinh(){
+           return  this.birth;
+        }
+        getCMND(){
+           return  this.ID;
+        }
+        getGioiTinh(){
+           return  this.gender;
+        }
+        getDiaChi(){
+           return  this.address;
+        }
+        setSoDienThoai(){
+           return  this.SDT;
+        }
+    }
+
+    function AddNewEmployee() {
+        let employee=new Employee();
+        let username=document.getElementById('username');
+        let name=document.getElementById('name');
+        let password=document.getElementById('password');
+        let birthday = document.getElementById('birthday');
+        let gender=document.getElementById('gender');
+        let add=document.getElementById('add');
+        let num=document.getElementById('num');
+        employee.setTenDangNhap(username);
+        employee.setTenNhanVien(name);
+        employee.setMatKhau(password);
+        employee.setNgaySinh(birthday);
+        employee.setGioiTinh(gender);
+        employee.setDiaChi(add);
+        employee.setSoDienThoai(num);
+        listEmployee.push(employee);
+        console.log(listEmployee)
+    }
+    let submit=document.getElementById('submit');
+    submit.onclick=AddNewEmployee();
+
+
+
+</script>
 </body>
 </html>

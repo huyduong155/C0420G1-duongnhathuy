@@ -1,4 +1,5 @@
 package AbstractClass_Interface.thucHanh.lopAnimal;
 
-public class Animal {
+public abstract class Animal implements Edible{
+    public abstract String makeSound();
 }

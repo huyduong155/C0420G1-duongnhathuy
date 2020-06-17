@@ -1,4 +1,6 @@
 package AbstractClass_Interface.baiTap;
 
-public class Resizeable {
+public interface Resizeable {
+    double resize(double Area,double percent);
+
 }
