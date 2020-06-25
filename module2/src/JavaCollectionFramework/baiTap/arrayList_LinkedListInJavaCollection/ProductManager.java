@@ -35,6 +35,8 @@ public class ProductManager {
         for (int i = 0; i < lists.size(); i++) {
             if (id == lists.get(i).getId()) {
                 lists.get(i).setName(name);
+            }else if (i==lists.size()-1){
+                System.out.println("id bạn nhập không có");
             }
         }
         System.out.println("Danh sách sản phẩm: ");
@@ -53,6 +55,8 @@ public class ProductManager {
         for (int i = 0; i < lists.size(); i++) {
             if (lists.get(i).getId() == id) {
                 lists.remove(i);
+            }else if (i==lists.size()-1){
+                System.out.println("id bạn nhập không có");
             }
         }
         System.out.println("Danh sách sản phẩm: ");
@@ -82,6 +86,8 @@ public class ProductManager {
             if (name.equals(lists.get(i).getName())) {
                 System.out.println("Thông tin sản phẩm bạn muốn tìm: ");
                 System.out.println(lists.get(i).getId() + ". " + lists.get(i).getName() + ": " + lists.get(i).getPrice() + "đ");
+            }else if (i==lists.size()-1){
+                System.out.println("Tên bạn nhập không có");
             }
         }
         System.out.println("-------------------------");
@@ -142,7 +148,7 @@ public class ProductManager {
                     "\n5.Tìm kiếm sản phẩm" +
                     "\n6.Sắp xếp sản phẩm theo giá" +
                     "\n7.Exit");
-            System.out.print("Enter your choice: ");
+            System.out.print("Nhập số bạn chọn: ");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
