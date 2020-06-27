@@ -167,7 +167,6 @@ public class ProductManager {
                     pro.findProduct();
                     break;
                 case 6:
-//                    pro.sortProduct();
                     System.out.println("1.Sắp xếp tăng: " +
                             "\n2.Sắp xếp giảm: ");
                     System.out.print("Enter choice: ");
