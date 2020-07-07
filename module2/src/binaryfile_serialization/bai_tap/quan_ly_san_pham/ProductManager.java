@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProductManager {
-    static final String PATH = "module2/src/binaryfile_serialization/bai_tap/quan_ly_san_pham";
+    static final String PATH = "src\\binaryfile_serialization\\bai_tap\\quan_ly_san_pham";
     static List<Product> list = new ArrayList<>();
     static List<Product> listShow = new ArrayList<>();
 
@@ -25,16 +25,18 @@ public class ProductManager {
         boolean bool = true;
         try {
             ObjectInputStream objectInputStream = new ObjectInputStream(
-                    new FileInputStream("module2/src/binaryfile_serialization/bai_tap/quan_ly_san_pham/product_manager.csv"));
+                    new FileInputStream("product_manager.csv"));
             while (bool) {
                 Product product = (Product) objectInputStream.readObject();
                 if (product != null) {
                     list.add(product);
+                    System.out.println("abc");
                 } else
                     bool = false;
             }
+            objectInputStream.close();
         } catch (Exception e) {
-            e.getMessage();
+            System.out.println("bcd");
         }
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập mã sản phẩm: ");
@@ -53,10 +55,11 @@ public class ProductManager {
 
 
     public static void input() {
+
         ObjectOutputStream oos = null;
         try {
             oos = new ObjectOutputStream(
-                    new FileOutputStream("module2/src/binaryfile_serialization/bai_tap/quan_ly_san_pham/product_manager.csv"));
+                    new FileOutputStream("product_manager.csv"));
             for (int i = 0; i < list.size(); i++) {
                 oos.writeObject(list.get(i));
             }
@@ -64,6 +67,7 @@ public class ProductManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        list.clear();
         System.out.println();
     }
 
@@ -72,7 +76,7 @@ public class ProductManager {
         boolean bool = true;
         try {
             ObjectInputStream objectInputStream = new ObjectInputStream(
-                    new FileInputStream("module2/src/binaryfile_serialization/bai_tap/quan_ly_san_pham/product_manager.csv"));
+                    new FileInputStream("product_manager.csv"));
             while (bool) {
                 Product product = (Product) objectInputStream.readObject();
                 if (product != null) {

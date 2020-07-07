@@ -6,7 +6,8 @@ public class IllegalTriangleException extends Exception {
     }
 
     @Override
-    public String getMessage() {
+    public String getMessage()
+    {
         return "Lỗi nhập vào giá trị của cạnh: "+super.getMessage();
     }
 }
